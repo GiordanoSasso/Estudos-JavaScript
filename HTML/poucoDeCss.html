@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Um pouco de CSS</title>
+    <style>
+        h1 {
+            font-size: 20px;
+        }
+
+        .fundoVermelho {
+            background-color: rgba(255, 0, 0, 0.365);
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+
+        #textoPrincipal {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            padding: 10px;
+            background-color: #444;
+            margin-bottom: 50px;
+        }
+
+        button {
+            padding: 18px 30px;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: #3f3f3f;
+            border-radius: 5px;
+            min-width: 200px;
+            color: #fff;
+            z-index: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        button::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: -50px;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ffffff75, transparent);
+            transition: all is;
+            z-index: -1;
+            transform: translateX(-120px)
+            skew(-20deg);
+        }
+        button:hover::before {
+            transform: translateX(300px) skew(-20deg);
+        }
+
+        button:hover {
+            background: #00f7ff;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS</h1>
+    <span id="textoPrincipal">Texto 1</span><br><br><br>
+    <span class="fundoVermelho negrito">Texto 2</span><br><br>
+    <span class="fundoVermelho">Texto 3</span><br><br>
+    <button>
+        <span>Sujeito dev</span>
+    </button>
+
+</body>
+
+</html>
